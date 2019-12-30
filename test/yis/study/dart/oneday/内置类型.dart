@@ -69,6 +69,10 @@ void main() {
 //  list3 = [3,4]; todo 错误
 //  list3.add(11); todo 错误
 
+  List<dynamic> dyList = ["haha", 1, 2.1];
+
+  List.generate(3, (index) => index * 2);
+
   /**
    * 映射集合 map
    */
@@ -78,7 +82,7 @@ void main() {
   map[1] = 100;
   //用const声明和 list是一样的
 
-  var  map1 =  {1:1,2:2};
+  var map1 = {1: 1, 2: 2};
   //添加元素
   map1[3] = 100;
 
@@ -91,22 +95,23 @@ void main() {
   print(map1);
 
 
-
   /**
    * Runes ： 特殊字符表示类 （Unicode32）
    */
-  var clapping = '\u{8F8F1}'; ///5个16进制 需要使用{}
-  print(clapping);//👏
+  var clapping = '\u{8F8F1}';
+
+  ///5个16进制 需要使用{}
+  print(clapping); //👏
 //获得 16位代码单元
   print(clapping.codeUnits); //[55357, 56399]
 //获得unicode代码
   print(clapping.runes.toList()); //[128079]
 
 //fromCharCode 根据字符码创建字符串
-  print( String.fromCharCode(128079));
-  print( String.fromCharCodes(clapping.runes));
-  print( String.fromCharCodes([55357, 56399]));
-  print( String.fromCharCode(0x1f44f));
+  print(String.fromCharCode(128079));
+  print(String.fromCharCodes(clapping.runes));
+  print(String.fromCharCodes([55357, 56399]));
+  print(String.fromCharCode(0x1f44f));
 
   Runes input = new Runes(
       '\u2665  \u{1f605}  \u{1f60e}  \u{1f47b}  \u{1f596}  \u{1f44d}');
@@ -117,13 +122,10 @@ void main() {
    * Symbols 标识符
    */
   var a = #sadsad;
-  switch(a){
+  switch (a) {
     case #A:
       break;
     case #sadsad:
       break;
   }
-
-
-
 }
