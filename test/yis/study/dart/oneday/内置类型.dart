@@ -94,6 +94,15 @@ void main() {
   var keys = map1.keys;
   print(map1);
 
+  ///map遍历
+  map.forEach((k,v){
+    print("map 的key是$k value是$v");
+  });
+
+  for (var k in map.keys) {
+    print("map 中的key是 $k");
+  }
+
 
   /**
    * Runes ： 特殊字符表示类 （Unicode32）
