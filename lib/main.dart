@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/dart/StatelessStudy.dart';
 import 'package:flutter_study/dart/jichu.dart';
+import 'package:flutter_study/dart/layout_study.dart';
 
-import 'dart/stateful_study.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StatefulStudy(),
+      home: LayoutStudy(),
     );
   }
 }
