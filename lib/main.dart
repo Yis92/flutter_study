@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/dart/jichu.dart';
 import 'package:flutter_study/dart/layout_study.dart';
+import 'package:flutter_study/dart/router/router_main.dart';
 
 
 void main() => runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LayoutStudy(),
+      home: RouterMain(),
     );
   }
 }
