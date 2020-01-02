@@ -3,6 +3,8 @@ import 'package:flutter_study/dart/jichu.dart';
 import 'package:flutter_study/dart/layout_study.dart';
 import 'package:flutter_study/dart/router/router_main.dart';
 
+import 'dart/cupertino_demo.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RouterMain(),
+      home: CupertinoDemo(),
     );
   }
 }
