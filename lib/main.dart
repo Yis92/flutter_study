@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/dart/RouterUtils.dart';
-import 'package:flutter_study/dart/jichu.dart';
 import 'package:flutter_study/dart/layout_study.dart';
 import 'package:flutter_study/dart/router/router_main.dart';
+import 'package:flutter_study/dart/simple/launcher_app.dart';
 import 'package:flutter_study/dart/simple/res_page.dart';
 import 'package:flutter_study/dart/stateful_study.dart';
 
@@ -95,6 +95,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.deepOrange,
                     onPressed: () {
                       jumpPage(context, ResPage());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('打开第三方应用'),
+                    color: Colors.cyan,
+                    onPressed: () {
+                      jumpPage(context, LauncherApp());
                     },
                   ),
                 )
