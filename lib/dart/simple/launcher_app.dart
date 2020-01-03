@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
 
 /// 如何打开第三方app应用
 class LauncherApp extends StatefulWidget {
@@ -31,19 +31,19 @@ class _LauncherAppState extends State<LauncherApp> {
 }
 
 _launcherURL() async {
-  const url = 'https://pub.dev/packages/url_launcher/versions';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launcher$url';
-  }
+//  const url = 'https://pub.dev/packages/url_launcher/versions';
+//  if (await canLaunch(url)) {
+//    await launch(url);
+//  } else {
+//    throw 'Could not launcher$url';
+//  }
 }
 
 _openMap() async {
-  const url = 'geo:52.32,4.197';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    const url = 'http://maps.apple.com/?ll=52.32,4.197';
-  }
+//  const url = 'geo:52.32,4.197';
+//  if (await canLaunch(url)) {
+//    await launch(url);
+//  } else {
+//    const url = 'http://maps.apple.com/?ll=52.32,4.197';
+//  }
 }
