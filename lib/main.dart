@@ -6,6 +6,7 @@ import 'package:flutter_study/dart/simple/lifecycle/app_lifecycle.dart';
 import 'package:flutter_study/dart/simple/lifecycle/flutter_lifecycle.dart';
 import 'package:flutter_study/dart/simple/launcher_app.dart';
 import 'package:flutter_study/dart/simple/res_page.dart';
+import 'package:flutter_study/dart/simple/update_theme.dart';
 import 'package:flutter_study/dart/stateful_study.dart';
 
 import 'dart/StatelessStudy.dart';
@@ -124,6 +125,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.cyanAccent,
                     onPressed: () {
                       jumpPage(context, AppLifecycle());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('动态修改 app 主题'),
+                    color: Colors.deepOrange,
+                    onPressed: () {
+                      jumpPage(context, UpdateTheme());
                     },
                   ),
                 )
