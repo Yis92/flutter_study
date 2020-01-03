@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/dart/RouterUtils.dart';
 import 'package:flutter_study/dart/jichu.dart';
 import 'package:flutter_study/dart/layout_study.dart';
 import 'package:flutter_study/dart/router/router_main.dart';
+import 'package:flutter_study/dart/simple/res_page.dart';
+import 'package:flutter_study/dart/stateful_study.dart';
 
+import 'dart/StatelessStudy.dart';
 import 'dart/cupertino_demo.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CupertinoDemo(),
+      home: MyHomePage(),
     );
   }
 }
@@ -32,32 +35,75 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 10;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('dart 学习'),
       ),
-      body: Center(
-        child: ListView(
-          children: <Widget>[
-            DataType()
-          ],
+      body: Scrollbar(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                FlatButton(
+                  color: Colors.blue,
+                  child: Text('StatelessStudy'),
+                  onPressed: () {
+                    jumpPage(context, StatelessStudy());
+                  },
+                ),
+                Container(
+                  child: FlatButton(
+                    color: Colors.tealAccent,
+                    child: Text('stateful_study'),
+                    onPressed: () {
+                      jumpPage(context, StatefulStudy());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    color: Colors.amber,
+                    child: Text('布局控件学习'),
+                    onPressed: () {
+                      jumpPage(context, LayoutStudy());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    color: Colors.cyanAccent,
+                    child: Text('路由跳转'),
+                    onPressed: () {
+                      jumpPage(context, RouterMain());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('iOS 系统风格'),
+                    color: Colors.blue,
+                    onPressed: () {
+                      jumpPage(context, CupertinoDemo());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('加载本地资源'),
+                    color: Colors.deepOrange,
+                    onPressed: () {
+                      jumpPage(context, ResPage());
+                    },
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
