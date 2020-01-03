@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/dart/RouterUtils.dart';
 import 'package:flutter_study/dart/layout_study.dart';
 import 'package:flutter_study/dart/router/router_main.dart';
+import 'package:flutter_study/dart/simple/lifecycle/app_lifecycle.dart';
+import 'package:flutter_study/dart/simple/lifecycle/flutter_lifecycle.dart';
 import 'package:flutter_study/dart/simple/launcher_app.dart';
 import 'package:flutter_study/dart/simple/res_page.dart';
 import 'package:flutter_study/dart/stateful_study.dart';
@@ -104,6 +106,24 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.cyan,
                     onPressed: () {
                       jumpPage(context, LauncherApp());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('Flutter 生命周期管理'),
+                    color: Colors.amber,
+                    onPressed: () {
+                      jumpPage(context, FlutterLifecycle());
+                    },
+                  ),
+                ),
+                Container(
+                  child: FlatButton(
+                    child: Text('Flutter app 应用生命周期管理'),
+                    color: Colors.cyanAccent,
+                    onPressed: () {
+                      jumpPage(context, AppLifecycle());
                     },
                   ),
                 )
